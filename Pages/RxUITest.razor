@@ -1,4 +1,4 @@
-﻿@page "/counter"
+﻿@page "/rxui"
 @using ReactiveUI
 @using System.Reactive.Threading.Tasks
 @inject TestViewModel _viewModel
@@ -10,7 +10,7 @@
     <MudAlert Severity="Severity.Info">@_viewModel.CustomText</MudAlert>
 }
 
-<MudText Typo="Typo.h3" GutterBottom="true">Counter</MudText>
+<MudText Typo="Typo.h3" GutterBottom="true">ReactiveUI Test</MudText>
 <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="OnButtonClick">Click me</MudButton>
 
 
@@ -29,7 +29,7 @@
 
     private async Task OnButtonClick()
     {
-        await _viewModel.SomeCommand.Execute("This is comming from Counter.razor").ToTask();
+        await _viewModel.SomeCommand.Execute("This is comming from TestRxUI.razor").ToTask();
     }
 
     public void Dispose()
