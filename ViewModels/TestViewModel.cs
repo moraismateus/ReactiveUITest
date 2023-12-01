@@ -30,7 +30,7 @@ public class TestViewModel : ReactiveObject
             .Subscribe(data =>
             {
                 CustomText = data;
-                ShowAlert = !_showAlert;
+                ShowAlert = true;
             });
 
         SomeCommand = ReactiveCommand.Create<string, Unit>(ExecuteCommand);
